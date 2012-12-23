@@ -1,0 +1,13 @@
+{
+    "name": "course-work",
+    "version": "0.0.1",
+    "description": "An example project skeleton",
+    "homepage": "http://example.org",
+    "copyright": "Copyright © 2000, Edit Me",
+    "authors": [
+        "Егоренков Вячеслав"
+    ],
+    "dependencies": {
+        
+    }
+}

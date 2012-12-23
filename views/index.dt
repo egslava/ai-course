@@ -1,0 +1,36 @@
+extends layout
+
+block head
+	- js ("sha256");
+
+	:javascript
+		$(function (){
+
+			// Setting handlers...
+			$("#login").click(function(){
+				auth($("#user").val(), sha256_digest($("#password").val()));
+			});
+
+			$("#register").click(function(){
+				register($("#user").val(), sha256_digest($("#password").val()));
+			});
+		})
+
+block body
+	h1 Записки v1.0
+	p Эта программа предназначена для ведения записок.
+	p Для того, чтобы начать пользоваться программой, Вам необходимо войти, либо зарегистрироваться:
+
+	form#userdata
+		input#user(type="text", placeholder="Введите сюда Ваш e-mail")
+		br
+		input#password(type="password", placeholder="Введите сюда Ваш пароль")
+		br
+		.row
+			.container
+				input#login(type="button", value="Войти")
+			.container
+				input#register(type="button", value="Зарегистрироваться")
+
+
+

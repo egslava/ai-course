@@ -1,0 +1,22 @@
+extends layout
+
+block head
+	:javascript
+		$( function() {
+			$.jGrowl("loaded!");
+			$("#logout").click( logout );
+
+			$("#add").click( addNote );
+		});
+block body
+	p=notes["user"]
+	input#logout(type="button", value="Выйти")
+	br
+
+	input#newmsg(type="text", placeholder="Введите сюда текст записки")
+	input#add(type="button", value="ОК")
+	br
+	
+	- foreach ( note; notes["notes"] )
+		p=note["title"]
+		br

@@ -1,0 +1,14 @@
+$background-color: #343333;
+$text-color: #FFF;
+$text-size: 16pt;
+$header-scale: 12;	//hN = $text-size / 6 * $header-scale
+$spaces: 15px;
+
+//compass
+$default-text-shadow-color: spin($text-color, 10);
+$default-text-shadow-h-offset: 0px;
+$default-text-shadow-v-offset: 0px;
+$default-text-shadow-blur: 2px;
+$default-text-shadow-spread: false;
+
+$default-border-radius: 25px;

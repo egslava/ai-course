@@ -1,0 +1,22 @@
+- void css(string file)
+	link(rel= 'stylesheet', type='text/css', href='/styles/#{file}.css')
+- void js(string file)
+	script(type='text/javascript', src='/scripts/#{file}.js')
+!!! 5
+html
+	head
+		- js("jquery-1.8.3");
+		- js("jquery.cookie");
+		- js("jquery.jgrowl");
+		- js("main");
+
+		- css ("jquery.jgrowl");
+		- css ("screen");
+		:javascript
+			//setTimeout(function(){
+			//	window.location.reload(1);
+			//}, 1000);
+		block head
+		title Example page
+	body
+		block body
